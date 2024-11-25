@@ -16,6 +16,7 @@ export default {
       colors: {
         SoftBlue: "hsl(231, 69%, 60%)",
         SoftRed: "hsl(0, 94%, 66%)",
+        Gray: "rgba(247, 247, 247, 255)",
         GrayishBlue: "hsl(229, 8%, 60%)",
         DarkBlue: "hsl(229, 31%, 21%)",
       },
