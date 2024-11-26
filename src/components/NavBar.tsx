@@ -1,11 +1,21 @@
 import React from "react";
-import { bookmarklogo, iconhamburger } from "../assets";
+import { bookmarklogo } from "../assets";
 import { NavLink } from "../constants";
 import { useState, useEffect } from "react";
 import { Button } from "./ui/Button";
+import SideBar from "./SideBar";
 
 const NavBar: React.FC = () => {
   const [stickyClass, setStickyClass] = useState<boolean>(false);
+  // const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
+  
+  
+  // const handleSidebarToggle = () => {
+  //   setSidebarOpen(!sidebarOpen);
+  // };
+  // const handleSidebarClose = () => {
+  //   setSidebarOpen(false);
+  // };
 
   const stickNavbar = () => {
     if (typeof window !== "undefined") {
@@ -13,12 +23,11 @@ const NavBar: React.FC = () => {
       setStickyClass(windowHeight > 50);
     }
   };
-  
+
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
     return () => window.removeEventListener("scroll", stickNavbar);
   }, []);
-  
 
   return (
     <nav
@@ -28,7 +37,7 @@ const NavBar: React.FC = () => {
           : ""
       }`}
     >
-      <main className="container flex flex-row items-center justify-between w-full py-8 mx-auto max-w-7xl">
+      <main className="container flex flex-row items-center justify-between w-full mx-auto md:py-8 max-w-7xl mx:py-5">
         <a href="/" className="">
           <img src={bookmarklogo} alt="Bookmark logo" />
         </a>
@@ -48,10 +57,13 @@ const NavBar: React.FC = () => {
             </Button>
           </div>
         </div>
-        <div className="md:hidden mx:flex">
-          <button>
+        {/* <div className="md:hidden mx:flex">
+          <button onClick={handleSidebarToggle}>
             <img src={iconhamburger} alt="hamburger icon" />
           </button>
+        </div> */}
+        <div className="md:hidden mx:flex">
+          <SideBar />
         </div>
       </main>
     </nav>
