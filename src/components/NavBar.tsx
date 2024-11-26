@@ -1,5 +1,5 @@
 import React from "react";
-import { bookmarklogo } from "../assets";
+import { bookmarklogo, iconhamburger } from "../assets";
 import { NavLink } from "../constants";
 import { useState, useEffect } from "react";
 import { Button } from "./ui/Button";
@@ -28,11 +28,11 @@ const NavBar: React.FC = () => {
           : ""
       }`}
     >
-      <main className="flex flex-row items-center justify-between w-full py-8 mx-auto md:container max-w-7xl">
+      <main className="container flex flex-row items-center justify-between w-full py-8 mx-auto max-w-7xl">
         <a href="/" className="">
           <img src={bookmarklogo} alt="Bookmark logo" />
         </a>
-        <div className="flex flex-row gap-10">
+        <div className="flex-row gap-10 md:flex mx:hidden">
           <div className="flex flex-row gap-8">
             {NavLink.map(({ id, title, link }) => (
               <div key={id}>
@@ -47,6 +47,11 @@ const NavBar: React.FC = () => {
               <span className="font-Rubik">Login</span>
             </Button>
           </div>
+        </div>
+        <div className="md:hidden mx:flex">
+          <button>
+            <img src={iconhamburger} alt="hamburger icon" />
+          </button>
         </div>
       </main>
     </nav>

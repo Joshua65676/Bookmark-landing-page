@@ -28,7 +28,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-row gap-5 w-[28rem]">
+    <div className="flex md:flex-row gap-5 md:w-[28rem] mx:flex-col">
       <div className="relative">
         <div>
           <input
@@ -36,7 +36,7 @@ const ContactForm: React.FC = () => {
             value={email}
             onChange={handleChange}
             placeholder="Enter your Gmail address"
-            className={`w-[20rem] p-2 border font-Rubik font-medium h-[2.9rem] pl-4 ${
+            className={`md:w-[20rem] p-2 border font-Rubik font-medium h-[2.9rem] pl-4 mx:w-[21rem] ${
               error ? "border-SoftRed border-4" : "border-Gray"
             } rounded`}
           />
@@ -53,7 +53,7 @@ const ContactForm: React.FC = () => {
 
       <div>
         <Button
-          className="text-white rounded-md border-SoftRed bg-SoftRed hover:border-4 hover:text-SoftRed "
+          className="text-white rounded-md border-SoftRed bg-SoftRed hover:border-4 hover:text-SoftRed mx:w-[21rem] md:w-36"
           onClick={handleClick}
         >
           <span className="font-medium font-Rubik">Contact Us</span>

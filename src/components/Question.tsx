@@ -18,11 +18,11 @@ const Question: React.FC = () => {
     <section className="w-full pb-32 mx-auto md:container max-w-7xl">
       <main className="flex flex-col items-center gap-20">
         <div className="flex flex-col items-center gap-4">
-          <h3 className="text-3xl font-semibold font-Rubik text-DarkBlue">
+          <h3 className="text-3xl font-semibold font-Rubik text-DarkBlue mx:w-64 mx:text-center md:w-full">
             {" "}
             Frequently Asked Questions
           </h3>
-          <div className="w-7/12 text-center font-Rubik">
+          <div className="text-center md:w-7/12 font-Rubik mx:w-10/12">
             <p className="text-[16px] font-normal text-GrayishBlue inline leading-[26.2px] -tracking-[2.5%]">
               Here are some of our FAQs. If you have any other questions you’d
               like answered please feel free to email us.
@@ -30,10 +30,10 @@ const Question: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-8 w-[38rem]">
+        <div className="flex flex-col gap-8 md:w-[38rem] mx:w-[22rem]">
           {QuestionLists.map(({ id, question, answer }) => (
             <div key={id} className="flex flex-col gap-4 hover:text-SoftRed">
-              <hr className="border w-[38rem]" />
+              <hr className="border w-[38rem] mx:hidden md:flex" />
               <div className="flex flex-col gap-3">
                 <div className="flex flex-row justify-between">
                     <h2 className="pl-3 font-normal font-Rubik">{question}</h2>
@@ -51,7 +51,7 @@ const Question: React.FC = () => {
                   </div>
                 )}
               </div>
-              <hr className="border w-[38rem]" />
+              <hr className="border md:w-[38rem]" />
             </div>
           ))}
         </div>

@@ -11,7 +11,7 @@ const Extension: React.FC = () => {
             {" "}
             Download the extension
           </h3>
-          <div className="w-7/12 text-center font-Rubik">
+          <div className="text-center md:w-7/12 font-Rubik mx:w-9/12">
             <p className="text-[16px] font-normal text-GrayishBlue inline leading-[26.2px] -tracking-[2.5%]">
               We’ve got more browsers in the pipeline. Please do let us know if
               you’ve got a favourite you’d like us to prioritize.
@@ -19,10 +19,10 @@ const Extension: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-row items-center justify-center gap-10 text-center">
+        <div className="flex items-center justify-center gap-10 text-center md:flex-row mx:flex-col">
           {Extensions.map(({ id, image, title, version, dotbg, addbutton }) => (
-            <ul key={id}>
-              <div className="flex flex-col gap-5 bg-white shadow-xl h-[18rem] w-[15rem] rounded-xl">
+            <div key={id}>
+              <div className="flex flex-col gap-5 bg-white shadow-xl h-[18rem] md:w-[15rem] rounded-xl">
                 <div className="flex items-center justify-center">
                   <img src={image} alt={title} className="" />
                 </div>
@@ -43,7 +43,7 @@ const Extension: React.FC = () => {
                   </Button>
                 </div>
               </div>
-            </ul>
+            </div>
           ))}
         </div>
       </main>
