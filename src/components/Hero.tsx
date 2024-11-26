@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "./ui/Button";
 import { hero } from "../assets";
-
 const Hero: React.FC = () => {
   return (
     <div className="w-full mx-auto md:container max-w-7xl">
