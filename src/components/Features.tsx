@@ -1,6 +1,5 @@
 import React from "react";
 import MainFeatures from "./MainFeatures";
-// import { FeaturesLink } from "../constants";
 
 const Features: React.FC = () => {
   return (
@@ -16,20 +15,7 @@ const Features: React.FC = () => {
             </p>
           </div>
         </div>
-        {/* <div className="flex flex-col items-center gap-5">
-          <div className="flex flex-row items-center gap-24">
-            {FeaturesLink.map(({ id, title }) => (
-              <ul key={id}>
-                <button className="text-xl font-normal text-center font-Rubik text-GrayishBlue hover:text-DarkBlue">
-                  <span>{title}</span>
-                </button>
-              </ul>
-            ))}
-          </div>
-          <div>
-            <hr className="border-2 border-GrayishBlue w-[50rem]"/>
-          </div>
-        </div> */}
+
         <MainFeatures />
       </main>
     </section>
