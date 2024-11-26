@@ -10,6 +10,7 @@ import tab2 from './images/illustration-features-tab-2.svg'
 import tab3 from './images/illustration-features-tab-3.svg'
 import hero from './images/illustration-hero.svg'
 import bookmarklogo from './images/logo-bookmark.svg'
+import Bookmarklogo from './images/bookmark-logo.svg'
 import chromelogo from './images/logo-chrome.svg'
 import firefoxlogo from './images/logo-firefox.svg'
 import operalogo from './images/logo-opera.svg'
@@ -27,6 +28,7 @@ export {
     tab3,
     hero,
     bookmarklogo,
+    Bookmarklogo,
     chromelogo,
     firefoxlogo,
     operalogo,

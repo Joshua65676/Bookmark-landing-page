@@ -30,16 +30,16 @@ const NavBar: React.FC = () => {
     >
       <main className="flex flex-row items-center justify-between w-full py-8 mx-auto md:container max-w-7xl">
         <a href="/" className="">
-          <img src={bookmarklogo} alt="" />
+          <img src={bookmarklogo} alt="Bookmark logo" />
         </a>
         <div className="flex flex-row gap-10">
           <div className="flex flex-row gap-8">
             {NavLink.map(({ id, title, link }) => (
-              <ul key={id}>
+              <div key={id}>
                 <a href={link}>
                   <span className="font-Rubik hover:text-SoftRed">{title}</span>
                 </a>
-              </ul>
+              </div>
             ))}
           </div>
           <div className="-mt-1">
